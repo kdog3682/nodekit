@@ -1,9 +1,7 @@
-// import * as chalk from "./chalk.js"
 import { exec } from "child_process"
 export { bash }
 
 async function bash(command) {
-    console.log(chalk.blue(command))
     return new Promise((resolve, reject) => {
         exec(command, (error, stdout, stderr) => {
             if (error) {
@@ -21,3 +19,4 @@ async function bash(command) {
         })
     })
 }
+
